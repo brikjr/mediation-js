@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto" , sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+.video-container {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    bottom: 0;
+    right: 0; 
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+}
+.video-container video{
+    width: 100%;
+    display: block;
+}
+.timer,
+.playing,
+.mode {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 101;
+}
+
+.timer {
+    position: relative;
+}
+.timer button{
+    font-size: 1.7rem;
+    color: #f4f4f4;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid #f4f4f4;
+    border-radius: 10px;
+    width: 40%;
+    height: 10%;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+}
+.timer button:hover , .timer button.active{
+    background-color: #fff;
+    color: #444;
+}
+.time-counter{
+    position: absolute;
+    bottom: 10%;
+    color: #fff;
+    font-size: 3rem;
+}
+.playing {
+    position: relative;
+}
+.playing img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    cursor: pointer;
+}
+.playing svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)rotate(-90deg);
+    pointer-events: none;
+    height: 50%;
+    
+}
+
+
+.mode {
+    position: relative;
+}
+
+.mode button {
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.mode button img {
+    width: 100%;
+    display: block;
+}
